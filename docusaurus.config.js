@@ -43,10 +43,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Dataplane',
+        title: '',
         logo: {
           alt: 'Dataplane Logo',
-          src: 'img/logo.svg',
+          src: 'img/dataplane_logo.png',
         },
         items: [
           {
