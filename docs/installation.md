@@ -6,25 +6,31 @@ description: This guide takes you through the options to setup a development env
 slug: /install-dataplane
 ---
 
-Let's get started by creating a simple data pipeline. They say that anything complex is made up of simple parts. You can use these basic building blocks to go on and conquer the data world with more complex data pipelines. 
+### Minimum requirements
 
-We will follow these steps:
-1. Create a pipeline
-2. Choose a trigger
-3. Add processors
-4. Write python code inside a processor
-5. Run the pipeline
+* 1 CPU, 500MB Memory
+* Containerised environment
+    - Docker https://docs.docker.com/engine/install/
+    - Minikube https://minikube.sigs.k8s.io/docs/start/
+* Docker image releases: https://hub.docker.com/u/dataplane
 
-### Create a pipeline
 
-Go to pipelines and click the Create button
+### Install with Docker
 
-![Create data pipeline](/img/get-started/create_pipeline_1.png)
+1. Download the docker-compose.yaml file
 
-A sidebar will open up and will ask for a name, description and worker group. 
+```shell
+curl -LfO 'https://raw.githubusercontent.com/dataplane-app/dataplane/main/quick-start/docker-compose.yaml'
+```
 
-![Create data pipeline sidebar](/img/get-started/create_pipeline_sidebar.png)
+2. Run using docker-compose v2
 
-:::tip Worker groups
-A worker group is a group of servers (workers) that will run the code. Workers run as separate servers and can be configured to scale with your analytical workloads. 
-:::
+```shell
+docker-compose up
+```
+
+For first time setup, follow the get started process at: <a href="http://localhost:9001/webapp/get-started">http://localhost:9001/webapp/get-started</a><br />
+To use Dataplane, go to <a href="http://localhost:9001/webapp/get-started">http://localhost:9001/webapp/</a>
+
+
+### Install with Minikube
