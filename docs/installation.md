@@ -11,9 +11,10 @@ slug: /install-dataplane
 * 1 CPU, 500MB Memory
 * Containerised environment
     - Docker https://docs.docker.com/engine/install/
-    - Minikube https://minikube.sigs.k8s.io/docs/start/
+    - Kubernetes Minikube https://minikube.sigs.k8s.io/docs/start/
 * Docker image releases: https://hub.docker.com/u/dataplane
 
+<br />
 
 ### Install with Docker
 
@@ -28,12 +29,14 @@ curl -LfO 'https://raw.githubusercontent.com/dataplane-app/dataplane/main/quick-
 ```shell
 docker-compose up
 ```
+<br />
 
-For first time setup, follow the get started process at: <a href="http://localhost:9001/webapp/get-started">http://localhost:9001/webapp/get-started</a><br />
+For first time setup, follow the get started process at: <a href="http://localhost:9001/webapp/get-started">http://localhost:9001/webapp/get-started</a><br /><br />
 To use Dataplane, go to <a href="http://localhost:9001/webapp/get-started">http://localhost:9001/webapp/</a>
 
+<br />
 
-### Install with Minikube
+### Install with Kubernetes Minikube
 
 This installation is designed for a local running instance of Minikube.
 
@@ -58,3 +61,18 @@ kubectl apply -f dataplane-k8s-combined.yaml
 ```
 
 3. Ingress for local access
+
+Obtain the ingress IP address and add that to the /etc/hosts.
+
+```shell
+# Get IP address
+kubectl get ingress
+
+# Edit /etc/hosts
+sudo nano /etc/hosts
+
+# Add this line and replace 172.17.0.15 with the IP address of your ingress.
+172.17.0.15 dataplane.info
+```
+
+Go to http://dataplane.info/webapp/
