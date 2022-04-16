@@ -9,22 +9,27 @@ slug: /create-a-data-pipeline
 Let's get started by creating a simple data pipeline. They say that anything complex is made up of simple parts. You can use these basic building blocks to go on and conquer the data world with more complex data pipelines. 
 
 We will follow these steps:
-1. Create a pipeline
+1. Create a data pipeline
 2. Choose a trigger
 3. Add processors
-4. Write python code inside a processor
+4. Test run your pipeline
+5. Write python code inside a processor
     - Update the python packages
     - Write python code
     - Test the code
-5. Run the pipeline
+6. Run the pipeline
 
-### Create a pipeline
+<br />
+<br />
 
-Go to pipelines and click the Create button.
+### Create a data pipeline
+
+Go to Pipelines and click the Create button.
 ![Create data pipeline](/img/get-started/create_pipeline_1.png)
 <br />
 
-A sidebar will open up and will ask for a name, description and worker group.
+A sidebar will open up and will ask for a name, description and worker group. <br />
+
 ![Create data pipeline sidebar](/img/get-started/create_pipeline_sidebar.png)
 
 :::info Worker groups
@@ -54,29 +59,117 @@ Try create a pipeline similar to the recording below:
 1. Drag and drop python processors to construct your data pipeline. 
 2. Use the connector arrows to join each step. 
 3. Save the pipeline by pressing the Save button in the top right hand corner.
-3. To test your pipeline, press the Run button, each step should turn green.
-4. To see the real-time run logs, click on the three dots on one of the steps and click Logs.
 
 The below image shows You can design processors in your pipeline to run sequentially or in parrallel.
-
-**Pipeline design**
-1. Play button is the trigger that will run the pipeline
-2. Connect customer data, Connect product data and Connect transaction data will run in parrallel.
-3. Once the three connect data steps has completed, the Data model step will start.
-4. Final step is the visualisation or distribution step. This will run once point 3 has completed.
 
 ![Drag drop python processors in your data pipeline](/img/get-started/drag_drop_processors.gif)
 
 <br />
 
-### Write python code inside a processor
+:::info Pipeline design
+1. Play button is the trigger that will run the pipeline
+2. Connect customer data, Connect product data and Connect transaction data will run in parrallel.
+3. Once the three connect data steps has completed, the Data model step will start.
+4. Final step is the visualisation or distribution step. This will run once point 3 has completed.
+:::
 
-To get to the code editor, click on the three dots on the Connect customer data step and then click on Code.
+<br />
+
+### Test run your data pipeline
+
+To test your pipeline, press the Run button, each step will go through the following cycle:
+1. Queue (Purple) - in the queue or planned to run
+2. Running (Blue) - currently running
+3. Succeeded (Green) - completed successfully
+4. Failed (Red) - an error occurred or pipeline stopped
+
+To see the real-time run logs, click on the three dots on one of the processors and click Logs.
+
+![Run your data pipeline](/img/get-started/running-pipeline.png)
+
+<br />
+
+### Open the code editor
+
+To open the code editor, click on the three dots on the processor and click on Code.
 
 ![Edit python code in your data pipeline](/img/get-started/edit-code.png)
 
-This will open up the code editor for that step. The defau
+This will open up the code editor for that step in the pipeline.
 
 
-#### Update the python packages
+
+<br />
+
+### Update Python packages
+
+First we need to update the Python pip packages that we need.
+
+1. Click Edit in the Python packages section
+2. Update the packages with these two pip packages
+```
+pandas==1.4.0
+numpy==1.22.3
+```
+3. Click the Install button
+
+![Install python pip packages](/img/get-started/install-python-packages.png)
+
+<br />
+
+### Write and test python code
+
+To add logic or code, we will update the **dp-entrypoint.py** file. This is the default entry point for the python processor.
+
+1. Click on dp-entrypoint.py to open the file
+2. Add the below test code to dp-entrypoint.py
+2. Press Save
+3. Press Run
+
+
+Your result should look like this.
+![Write and test python code](/img/get-started/edit-python-code.png)
+
+
+```python
+import numpy as np
+import pandas as pd
+
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
+
+print(s.info)
+
+dates = pd.date_range("20130101", periods=6)
+
+print(dates)
+
+df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD"))
+
+print(df)
+
+df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD"))
+
+print(df)
+```
+<br />
+
+:::info
+You can fully replace the code. It is safe to remove any print statements at the top. Usually looks something similar to this: 
+```python
+print("Pipeline id: d81e1c73-b45f-4ff2-81a8-70604606045b")
+print("Node id: 2cefb087-dbb6-48bc-91b8-6708ec6e5606")
+```
+:::
+
+<br />
+
+### Run your pipeline
+
+Close the code editor and you will be taken back to the pipeline page. <br />
+
+Press Run. <br />
+
+Congratulations, you have successfully built, tested and run a data pipeline on Dataplane 🎉🎉🎉
+
+
 
