@@ -21,7 +21,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        googleAnalytics: {
+        gtag: {
           trackingID: 'G-KQJWR0DJXM',
           anonymizeIP: false,
         },
