@@ -6,7 +6,7 @@ description: This tutorial is a step by step guide to write a basic data pipelin
 slug: /create-a-data-pipeline
 ---
 
-Let's get started by creating a simple data pipeline. They say that anything complex is made up of simple parts. You can use these basic building blocks to go on and conquer the data world with more complex data pipelines. 
+Let's get started by creating a simple data pipeline. They say that anything complex is made up of simple parts, so use these basic building blocks to go on and conquer the data world with more complex data pipelines. 
 
 We will follow these steps:
 1. Create a data pipeline
@@ -42,11 +42,11 @@ A worker group is a group of servers (workers) that will run the code. Workers r
 
 The most basic of triggers is the play trigger. The play trigger starts a pipeline when the Run button is pressed. 
 
-Drag the play trigger on to the canvas as the first component of your data pipeline.
+Drag the play trigger onto the canvas as the first component of your data pipeline.
 ![Add play trigger in data pipeline](/img/get-started/add-play-trigger.png)
 
 :::info Triggers
-A trigger is the first step in a data pipeline and its the "trigger" that fires off the pipeline to run. There are different types of triggers that can start a pipeline. For example the scheduler trigger will fire off based on a regular schedule such as every hour or 8am every Monday.
+A trigger is the first step in a data pipeline and, it's the "trigger" that fires off the pipeline to run. There are different types of triggers that can start a pipeline. For example, the scheduler trigger will fire off based on a regular schedule such as every hour or at 8am every Monday.
 :::
 
 <br />
@@ -55,29 +55,29 @@ A trigger is the first step in a data pipeline and its the "trigger" that fires 
 
 For each processor or step in your pipeline, you can write code that connects, transforms or distributes your data. The worker group or workers is the cluster of servers that run the processors.<br />
 
-Try create a pipeline similar to the recording below:
+Try creating a pipeline similar to the recording below:
 1. Drag and drop python processors to construct your data pipeline. 
 2. Use the connector arrows to join each step. 
 3. Save the pipeline by pressing the Save button in the top right hand corner.
 
-The below image shows You can design processors in your pipeline to run sequentially or in parrallel.
+The below image shows that you can design processors in your pipeline to run sequentially or in parallel.
 
 ![Drag drop python processors in your data pipeline](/img/get-started/drag_drop_processors.gif)
 
 <br />
 
 :::info Pipeline design
-1. Play button is the trigger that will run the pipeline
-2. Connect customer data, Connect product data and Connect transaction data will run in parrallel.
+1. The Play button is the trigger that will run the pipeline.
+2. Connect customer data, Connect product data and Connect transaction data will run in parallel.
 3. Once the three connect data steps has completed, the Data model step will start.
-4. Final step is the visualisation or distribution step. This will run once point 3 has completed.
+4. The final step is the visualisation or distribution step. This will run once point 3 has been completed.
 :::
 
 <br />
 
 ### Test run your data pipeline
 
-To test your pipeline, press the Run button, each step will go through the following cycle:
+To test your pipeline, press the Run button. Each step will go through the following cycle:
 1. Queue (Purple) - in the queue or planned to run
 2. Running (Blue) - currently running
 3. Succeeded (Green) - completed successfully
@@ -103,7 +103,7 @@ This will open up the code editor for that step in the pipeline.
 
 ### Update Python packages
 
-First we need to update the Python pip packages that we need.
+First, we update the Python pip packages that we need.
 
 1. Click Edit in the Python packages section
 2. Update the packages with these two pip packages
@@ -154,7 +154,7 @@ print(df)
 <br />
 
 :::info
-You can fully replace the code. It is safe to remove any print statements at the top. Usually looks something similar to this: 
+You can fully replace the code. It is safe to remove any print statements at the top which usually look similar to this: 
 ```python
 print("Pipeline id: d81e1c73-b45f-4ff2-81a8-70604606045b")
 print("Node id: 2cefb087-dbb6-48bc-91b8-6708ec6e5606")

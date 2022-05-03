@@ -6,10 +6,10 @@ description: Configuration settings for Python workers.
 slug: /configure-python-worker
 ---
 
-The workers are responsible for the actual data processing in the data pipeline. These settings can help you deploy new worker nodes. Worker nodes are clustered into worker groups. These worker groups can be assigned to specific pipelines or even a specific step in a pipeline. 
+The workers are responsible for the actual data processing in the data pipeline. These settings can help you deploy new worker nodes. Worker nodes are clustered into worker groups, and these worker groups can be assigned to specific pipelines or even a specific step in a pipeline. 
 
 :::info Environments
-Workers and their associated worker groups are specific to an environment. Only pipelines in that environment can be run on worker groups in the same environment. The isolation of environments is important concept in Dataplane to assist data operations to segregate access, projects and compute resources.
+Workers and their associated worker groups are specific to an environment. Only pipelines in that environment can be run on worker groups in the same environment. The isolation of environments is an important concept in Dataplane to assist data operations in segregating access, projects and compute resources.
 :::
 
 
