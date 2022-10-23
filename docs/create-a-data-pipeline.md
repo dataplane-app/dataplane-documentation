@@ -106,10 +106,11 @@ This will open up the code editor for that step in the pipeline.
 First, we update the Python pip packages that we need.
 
 1. Click Edit in the Python packages section
-2. Update the packages with these two pip packages
+2. Update the packages with these three pip packages
 ```
 pandas==1.4.0
 numpy==1.22.3
+dataplane==0.0.5
 ```
 3. Click the Install button
 
@@ -134,6 +135,7 @@ Your result should look like this.
 ```python
 import numpy as np
 import pandas as pd
+import dataplane
 
 s = pd.Series([1, 3, 5, np.nan, 6, 8])
 
