@@ -15,11 +15,11 @@ First of all, before you learn how to assign permissions, you need to know how t
 
 1. In order to add a new user, go to the **Team** page:
 
-![Permissions](/static/img/permissions/01.png)
+![Permissions](/img/permissions/01.png)
 
 2. Click on the **Add** button. You will be prompted a side menu on the right side of your screen:
 
-![Permissions](/static/img/permissions/02.png)
+![Permissions](/img/permissions/02.png)
 
 3. Fill in mandatory fields:
 
@@ -35,13 +35,13 @@ If you wish, you can also specify:
 
 4. Having the fields filled in, click on the **Save** button:
 
-![Permissions](/static/img/permissions/03.png)
+![Permissions](/img/permissions/03.png)
 
 A success message should be displayed unless the user has already existed in the system. If you have failed to add a user, please try to use a different email.
 
 5. User will appear on the list in the **Team** page:
 
-![Permissions](/static/img/permissions/04.png)
+![Permissions](/img/permissions/04.png)
 
 Well done! You have sucessfully added a new user.
 
@@ -54,19 +54,19 @@ The instruction below explains how to add access groups to Dataplane.
 
 1. Please go to the **Access Groups** page:
 
-![Permissions](/static/img/permissions/05.png)
+![Permissions](/img/permissions/05.png)
 
 2. Click on the **Add** button. You will be prompted a side menu on the right side of your screen:
 
-![Permissions](/static/img/permissions/06.png)
+![Permissions](/img/permissions/06.png)
 
 3. Give your access group a name (description is optional) and click on the **Save** button:
 
-![Permissions](/static/img/permissions/07.png)
+![Permissions](/img/permissions/07.png)
 
 4. If nothing fails, you will receive information about success and your new access group will appear on the list:
 
-![Permissions](/static/img/permissions/08.png)
+![Permissions](/img/permissions/08.png)
 
 Congratulations! You have sucessfully added a new access group.
 
@@ -82,24 +82,24 @@ Let's start with assigning permissions to a user.
 
 1. Go to the **Team** page and click on a user:
 
-![Permissions](/static/img/permissions/09.png)
+![Permissions](/img/permissions/09.png)
 
 2. Here you will find all the details about the user and you can assign them permissions:
 
-![Permissions](/static/img/permissions/10.png)
+![Permissions](/img/permissions/10.png)
 
 > In the **Belongs to environments** and **Belongs to access groups** sections you can specify which environments (e.g. Development, Production) and which access groups the user belongs to.
 3. In the **Permissions** section select from the dropdown list which permissions you would like to assign to the user:
 
-![Permissions](/static/img/permissions/11.png)
+![Permissions](/img/permissions/11.png)
 
 Just select a permission and confirm by clicking on the **Add** button:
 
-![Permissions](/static/img/permissions/12.png)
+![Permissions](/img/permissions/12.png)
 
 4. The permission will promptly appear below the dropdown, in its inherent section:
 
-![Permissions](/static/img/permissions/13.png)
+![Permissions](/img/permissions/13.png)
 
 You can add multiple permissions.
 
@@ -107,20 +107,20 @@ Now let's look at assigning permissions to access groups.
 
 5. Go to the **Access Groups** page and click on an access group:
 
-![Permissions](/static/img/permissions/14.png)
+![Permissions](/img/permissions/14.png)
 
 6. Here you will find all the details about the access group:
 
-![Permissions](/static/img/permissions/15.png)
+![Permissions](/img/permissions/15.png)
 
 > In the **Members** section you can add users that will belong to this access group.
 7. Like before, in the **Permissions** section you can select which permissions this access group will have:
 
-![Permissions](/static/img/permissions/16.png)
+![Permissions](/img/permissions/16.png)
 
 Just select a permission and confirm by clicking on the **Add** button. The permission will promptly appear below the dropdown, in its inherent section:
 
-![Permissions](/static/img/permissions/17.png)
+![Permissions](/img/permissions/17.png)
 
 
 ## What permissions there are and what they are for
