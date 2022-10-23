@@ -12,10 +12,10 @@ Here are some recommended libraries that the Dataplane team often use:
 
 1. [Pandas Dataframes](https://pypi.org/project/pandas/) is a powerful framework to join, transform and analyze data in memory.
 2. [SQLAlchemy](https://pypi.org/project/SQLAlchemy/) is a SQL client with connections to many different databases.
-3. [Requests](https://pypi.org/project/requests/) is a HTTP framework for connecting and consuming APIs
+3. [Requests](https://pypi.org/project/requests/) is a HTTP framework for connecting and consuming APIs.
 4. [Boto3](https://pypi.org/project/boto3/) is a AWS framework that we often use for storing data in S3 Compatible storage.
 5. [Redis](https://pypi.org/project/redis/) is a Redis client and is useful for temporarily storing data in memory and to cache data models.
-6. [Tensorflow](https://pypi.org/project/tensorflow/) is a deep learning framework for machine learning or AI
+6. [Tensorflow](https://pypi.org/project/tensorflow/) is a deep learning framework for machine learning or AI.
 7. [RPA Framework](https://pypi.org/project/rpaframework/) is a Robotics Process Automation (RPA) framework for automating repetitive tasks for example downloading daily reports from the company's ERP platform.
 
 You can find more Python packages at https://pypi.org/
